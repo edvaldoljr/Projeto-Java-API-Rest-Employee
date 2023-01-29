@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Objects;
 
 @Entity
 @Data
@@ -15,7 +16,6 @@ import java.io.Serializable;
 public class EmployeeEntity implements Serializable {
 
     private static final long attachments = 1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -26,7 +26,4 @@ public class EmployeeEntity implements Serializable {
     private String office; //cargo
     private String sector; //setor
     private Double wage; //salario
-
-
-
 }
